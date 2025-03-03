@@ -33,7 +33,16 @@
                 <p>Protección y estilo en un solo diseño.</p>
                 <p class="precio">$4,500 MXN</p>
                 <button>Comprar</button>
-                <button>Ver más</button>
+                <button class="verMasBtn" data-id="1">Ver más</button>
+                <div class="info-adicional" id="info-1" style="display:none;">
+                    <p>El Casco Deportivo es perfecto para cualquier tipo de motociclista. Con su diseño aerodinámico, ofrece una protección avanzada sin sacrificar el estilo. Su interior es completamente acolchonado para mayor confort durante largos viajes y tiene un sistema de ventilación de alta calidad para evitar el sobrecalentamiento.</p>
+                    <ul>
+                        <li>Material resistente de fibra de carbono</li>
+                        <li>Ventilación de alta eficiencia</li>
+                        <li>Interior acolchonado y antialérgico</li>
+                        <li>Visera antirrayaduras</li>
+                    </ul>
+                </div>
             </div>
             <div class="accesorio">
                 <img src="imagenes/guanteslucas.PNG" alt="Guantes de moto">
@@ -41,7 +50,16 @@
                 <p>Mayor agarre y seguridad en la conducción.</p>
                 <p class="precio">$2,500 MXN</p>
                 <button>Comprar</button>
-                <button>Ver más</button>
+                <button class="verMasBtn" data-id="2">Ver más</button>
+                <div class="info-adicional" id="info-2" style="display:none;">
+                    <p>Los Guantes Resistentes están diseñados para proporcionar un agarre superior y una protección completa en las manos. Su material es altamente duradero y cuenta con refuerzos en las zonas de mayor impacto. Con estos guantes, tu seguridad y confort estarán asegurados, sin dejar de lado el estilo.</p>
+                    <ul>
+                        <li>Material resistente a la abrasión</li>
+                        <li>Refuerzos en zonas críticas</li>
+                        <li>Puños ajustables para un mejor ajuste</li>
+                        <li>Forro interior transpirable</li>
+                    </ul>
+                </div>
             </div>
             <div class="accesorio">
                 <img src="imagenes/lucas.PNG" alt="Chaqueta de moto">
@@ -49,7 +67,16 @@
                 <p>Comodidad y seguridad en cada viaje.</p>
                 <p class="precio">$6,700 MXN</p>
                 <button>Comprar</button>
-                <button>Ver más</button>
+                <button class="verMasBtn" data-id="3">Ver más</button>
+                <div class="info-adicional" id="info-3" style="display:none;">
+                    <p>La Chaqueta Protectora es el accesorio perfecto para aquellos que buscan seguridad y estilo. Hecha con materiales resistentes, esta chaqueta cuenta con protecciones en los hombros, codos y espalda para evitar lesiones en caso de caídas. Además, es completamente ajustable para mayor comodidad y mejor ajuste al cuerpo.</p>
+                    <ul>
+                        <li>Material resistente y flexible</li>
+                        <li>Protecciones en hombros, codos y espalda</li>
+                        <li>Forro interior transpirable</li>
+                        <li>Diseño ajustable para mayor comodidad</li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
@@ -57,5 +84,27 @@
     <footer>
         <p>&copy; 2025 MotoSpeed - Todos los derechos reservados.</p>
     </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Obtener los botones "Ver más"
+        var buttons = document.querySelectorAll('.verMasBtn');
+
+        // Agregar evento de clic a cada botón
+        buttons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                var info = document.getElementById('info-' + button.getAttribute('data-id'));
+
+                // Toggle (alternar) la visibilidad de la información
+                if (info.style.display === "none" || info.style.display === "") {
+                    info.style.display = "block";
+                    button.textContent = "Ver menos";
+                } else {
+                    info.style.display = "none";
+                    button.textContent = "Ver más";
+                }
+            });
+        });
+    </script>
 </body>
 </html>
