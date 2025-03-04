@@ -21,6 +21,11 @@ header {
     width: 140px;
 }
 
+.inicio{ 
+margin-left: 3%;
+margin-right: 3%;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -44,14 +49,16 @@ nav ul li a:hover {
     color: #FFD700;
 }
 
+
 /* Contenedor de productos y modelos */
 .contenedorproductos, .contenedormodelos, .contenedoraccesorios {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
-    text-align: justify;
+    text-align: center;
     background-color: #252525;
+  
 }
 
 .producto, .modelo, .accesorio {
@@ -60,6 +67,8 @@ nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(255, 69, 0, 0.5);
     transition: transform 0.3s, box-shadow 0.3s;
+    width: 60%;
+    height: 70%;
 }
 
 .producto:hover, .modelo:hover, .accesorio:hover {
@@ -68,8 +77,11 @@ nav ul li a:hover {
 }
 
 .producto img, .modelo img, .accesorio img {
-    width: 100%;
+    width: 70%;
     border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .titulo {
@@ -94,7 +106,6 @@ nav ul li a:hover {
 .info-adicional {
     display: none;
     padding: 10px;
-    background-color: #333;
     color: #EAEAEA;
     margin-top: 10px;
     border-radius: 8px;
@@ -118,6 +129,11 @@ button:hover {
     transform: scale(1.1);
 }
 
+#mapa{
+    background-color:#EAEAEA;
+    width: 100%;
+    height: 400px;
+}
 
 footer {
     text-align: center;
@@ -145,6 +161,7 @@ footer {
 @media (max-width: 500px) {
     .contenedorproductos, .contenedormodelos, .contenedoraccesorios {
         grid-template-columns: repeat(1, 1fr);
+    
     }
     .header-logo img {
         width: 100px;
